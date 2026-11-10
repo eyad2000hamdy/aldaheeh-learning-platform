@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مساعدين سنتر الدحيح</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         Header
+    ====================================== -->
+
+    <header class="main-header">
+
+        <div class="header-logo">
+
+            سنتر الدحيح
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         الصفحة
+    ====================================== -->
+
+    <main class="assistants-page">
+
+
+        <!-- عنوان الصفحة -->
+
+        <section class="page-title">
+
+            <h1>
+                مساعدي سنتر الدحيح
+            </h1>
+
+            <p>
+                تواصل مع مساعدي السنتر بسهولة
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             كروت الـ Assistants
+        ====================================== -->
+
+        <section class="assistants-container" id="assistantsContainer">
+
+            <!--
+                الكروت يتم إنشاؤها
+                من خلال assistants.js
+            -->
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         Footer
+    ====================================== -->
+
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+    <!-- =================================
+         Navigation Bar
+         ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="home.html"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                🏠
+            </span>
+
+            <span>
+                الرئيسية
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="schedule.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                جدولي
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="teachers.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🏫
+            </span>
+
+            <span>
+                مدرسيني
+            </span>
+
+        </a>
+
+<!-- =====================================
+     قسم مساعدي سنتر الدحيح
+===================================== -->
+
+<a
+            href="assistants.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏃
+            </span>
+
+            <span>
+                الحجز
+            </span>
+
+        </a>
+
+        <a
+            href="account.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                حسابي
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- =====================================
+         JavaScript
+    ====================================== -->
+
+    <script src="assistants.js"></script>
+ <script src="data.js"></script>
+
+    <script src="home.js"></script>
+
+    <script>
+
+
+        /* =====================================
+           عنصر الكروت
+        ===================================== */
+
+        const assistantsContainer =
+            document.getElementById(
+                "assistantsContainer"
+            );
+
+
+
+        /* =====================================
+           عرض الـ Assistants
+        ===================================== */
+
+        function displayAssistants() {
+
+
+            if (!assistantsContainer) {
+
+                return;
+
+            }
+
+
+            assistantsContainer.innerHTML = "";
+
+
+
+            assistants.forEach(
+                function (assistant) {
+
+
+                    /* =============================
+                       إنشاء الكارت
+                    ============================= */
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className =
+                        "teacher-card assistant-card";
+
+
+
+                    /* =============================
+                       الصورة
+                    ============================= */
+
+                    let imageHTML = "";
+
+
+                    if (
+                        assistant.image &&
+                        assistant.image.trim() !== ""
+                    ) {
+
+                        imageHTML = `
+
+                            <div class="teacher-image-container">
+
+                                <img
+                                    src="${assistant.image}"
+                                    alt="${assistant.name}"
+                                    class="teacher-image"
+                                >
+
+                            </div>
+
+                        `;
+
+                    } else {
+
+                        imageHTML = `
+
+                            <div class="teacher-image-container">
+
+                                <div class="assistant-empty-image">
+
+                                    👤
+
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+
+                    /* =============================
+                       رابط واتساب
+                    ============================= */
+
+                    const whatsappLink =
+                        getWhatsAppLink(
+                            assistant.whatsapp
+                        );
+
+
+
+                    /* =============================
+                       الكارت
+                    ============================= */
+
+                    card.innerHTML = `
+
+                        ${imageHTML}
+
+
+                        <div class="teacher-info">
+
+
+                            <h3>
+
+                                ${assistant.name}
+
+                            </h3>
+
+
+                            <p class="teacher-subject">
+
+                                ${assistant.role}
+
+                            </p>
+
+
+                            <div class="assistant-phone">
+
+                                📱
+
+                                ${assistant.whatsapp}
+
+                            </div>
+
+
+                            <div class="teacher-buttons">
+
+
+                                <a
+                                    href="${whatsappLink}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="subscribe-btn assistant-whatsapp-btn"
+                                >
+
+                                    💬 تواصل على واتساب
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+                    `;
+
+
+                    assistantsContainer.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           تشغيل الصفحة
+        ====================================== */
+
+        displayAssistants();
+
+
+ 
+   </script>
+   
+
+</body>
+
+</html>

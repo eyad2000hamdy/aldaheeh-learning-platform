@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>مدرسيني - سنتر الدحيح</title>
+
+    <!-- ملف التصميم الرئيسي -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         صفحة مدرسيني
+         ================================= -->
+<!-- =================================
+     Developer Credit
+     ================================= -->
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+
+    <main class="my-teachers-page">
+
+
+        <!-- =================================
+             رأس الصفحة
+             ================================= -->
+
+        <header class="page-header">
+
+            <div>
+
+                <p class="small-text">
+                    المدرسين المشترك معاهم
+                </p>
+
+                <h1>
+                    👨‍🏫 مدرسيني
+                </h1>
+
+            </div>
+
+
+            <div class="app-logo">
+                🎓
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             عدد المدرسين
+             ================================= -->
+
+        <section class="my-teachers-summary">
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    👨‍🏫
+                </span>
+
+                <div>
+
+                    <span>
+                        المدرسين المشترك معاهم
+                    </span>
+
+                    <strong id="myTeachersCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             المدرسين
+             ================================= -->
+
+        <section class="my-teachers-section">
+
+
+            <div
+                class="my-teachers-container"
+                id="myTeachersContainer"
+            >
+
+                <!-- JavaScript هيضيف المدرسين هنا -->
+
+            </div>
+
+
+            <!-- =================================
+                 حالة عدم وجود مدرسين
+                 ================================= -->
+
+            <div
+                class="empty-my-teachers"
+                id="emptyMyTeachers"
+            >
+
+                <div class="empty-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    لسه مش مشترك مع أي مدرس
+                </h3>
+
+                <p>
+                    اختار مدرس من الصفحة الرئيسية وابدأ تنظيم جدولك.
+                </p>
+
+                <a
+                    href="home.html"
+                    class="browse-teachers-btn"
+                >
+                    تصفح المدرسين
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         Navigation Bar
+         ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="home.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏠
+            </span>
+
+            <span>
+                الرئيسية
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="schedule.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                جدولي
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="teachers.html"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                👨‍🏫
+            </span>
+
+            <span>
+                مدرسيني
+            </span>
+
+        </a>
+
+<a
+            href="assistants.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏃
+            </span>
+
+            <span>
+                الحجز
+            </span>
+
+        </a>
+
+
+        <a
+            href="account.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                حسابي
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================
+         JavaScript
+         ================================= -->
+
+    <script src="data.js"></script>
+
+    <script src="teachers.js"></script>
+
+
+</body>
+
+</html>

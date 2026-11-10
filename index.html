@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سنتر الدحيح</title>
+
+    <!-- ملف التصميم -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         خلفية الصفحة
+    ========================== -->
+
+    <div class="academic-bg">
+
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+
+    </div>
+
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+   
+
+    <!-- =========================
+         الصفحة الرئيسية
+    ========================== -->
+
+    <main class="welcome-page">
+
+        <div class="welcome-card">
+
+
+            <!-- الشعار -->
+
+            <div class="logo-wrapper">
+
+                <div class="logo">
+                    🎓
+                </div>
+
+            </div>
+
+
+            <!-- عنوان التطبيق -->
+
+            <div class="title-area">
+
+                <span class="small-title">
+                    منصة تعليمية للطلاب
+                </span>
+
+                <h1>
+                    سنتر الدحيح
+                </h1>
+
+                <div class="title-line"></div>
+
+                <p>
+                    نظّم حصصك... وخلي مذاكرتك أسهل
+                </p>
+
+            </div>
+
+
+            <!-- معلومات بسيطة -->
+
+            <div class="welcome-info">
+
+                <div class="info-item">
+                    <span>📚</span>
+                    <div>
+                        <strong>نظّم دراستك</strong>
+                        <small>رتّب حصصك ومواعيدك</small>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>👨‍🏫</span>
+                    <div>
+                        <strong>اختار مدرسينك</strong>
+                        <small>اعرف المدرسين والحصص</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- زر البداية -->
+
+            <button id="startBtn" class="start-btn">
+
+                <span>
+                    ابدأ الآن
+                </span>
+
+                <span class="arrow">
+                    ←
+                </span>
+
+            </button>
+
+
+            <!-- عبارة أسفل الزر -->
+
+            <p class="privacy-note">
+                بياناتك محفوظة على جهازك فقط 🔒
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         نافذة بيانات الطالب
+    ========================== -->
+
+    <div class="modal" id="studentModal">
+
+        <div class="modal-content">
+
+
+            <!-- زر الإغلاق -->
+
+            <button
+                class="close-btn"
+                id="closeModal"
+                type="button"
+            >
+                ×
+            </button>
+
+
+            <!-- رأس النافذة -->
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    👋
+                </div>
+
+                <h2>
+                    أهلاً بيك
+                </h2>
+
+                <p>
+                    قبل ما نبدأ، عرفنا بنفسك
+                </p>
+
+            </div>
+
+
+            <!-- الفورم -->
+
+            <form id="studentForm">
+
+
+                <!-- اسم الطالب -->
+
+                <div class="input-group">
+
+                    <label for="studentName">
+                        اسم الطالب
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="اكتب اسمك هنا"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- الصف الدراسي -->
+
+                <div class="input-group">
+
+                    <label for="studentGrade">
+                        الصف الدراسي
+                    </label>
+
+                    <select
+                        id="studentGrade"
+                        required
+                    >
+
+                        <option value="">
+                            اختر الصف الدراسي
+                        </option>
+
+                        <option value="الأول الإعدادي">
+                            الأول الإعدادي
+                        </option>
+
+                        <option value="الثاني الإعدادي">
+                            الثاني الإعدادي
+                        </option>
+
+                        <option value="الثالث الإعدادي">
+                            الثالث الإعدادي
+                        </option>
+
+                        <option value="الأول الثانوي">
+                            الأول الثانوي
+                        </option>
+
+                        <option value="الثاني الثانوي">
+                            الثاني الثانوي
+                        </option>
+
+                        <option value="الثالث الثانوي">
+                            الثالث الثانوي
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- زر الدخول -->
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+
+                    دخول إلى التطبيق
+
+                    <span>
+                        🚀
+                    </span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

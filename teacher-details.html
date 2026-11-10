@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>تفاصيل المدرس - سنتر الدحيح</title>
+
+    <!-- ملف التصميم الرئيسي -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+
+<body>
+
+
+    <!-- =================================
+         صفحة تفاصيل المدرس
+         ================================= -->
+
+    <main class="teacher-details-page">
+
+
+        <!-- =================================
+             زر الرجوع
+             ================================= -->
+
+        <header class="details-header">
+
+            <button
+                class="back-btn"
+                onclick="goBackHome()"
+            >
+
+                ←
+
+                <span>
+                    رجوع
+                </span>
+
+            </button>
+
+
+            <h1>
+                تفاصيل المدرس
+            </h1>
+
+        </header>
+
+
+
+        <!-- =================================
+             بيانات المدرس
+             ================================= -->
+
+        <section
+            class="teacher-details-card"
+            id="teacherDetailsContainer"
+        >
+
+            <!-- JavaScript هيضيف بيانات المدرس هنا -->
+
+        </section>
+
+
+
+        <!-- =================================
+             اختيار المواعيد
+             ================================= -->
+
+        <section
+            class="choose-schedule-section"
+            id="chooseScheduleSection"
+        >
+
+            <div class="section-title">
+
+                <h2>
+                    اختر مواعيدك
+                </h2>
+
+            </div>
+
+
+            <div
+                class="available-schedules"
+                id="availableSchedules"
+            >
+
+                <!-- المواعيد ستظهر هنا -->
+
+            </div>
+
+
+            <button
+                class="add-schedule-btn"
+                id="addScheduleBtn"
+            >
+
+                إضافة إلى جدولي
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         Navigation Bar
+         ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="home.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏠
+            </span>
+
+            <span>
+                الرئيسية
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="schedule.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                جدولي
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="teachers.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🏫
+            </span>
+
+            <span>
+                مدرسيني
+            </span>
+
+        </a>
+
+<a
+            href="assistants.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏃
+            </span>
+
+            <span>
+                الحجز
+            </span>
+
+        </a>
+
+
+        <a
+            href="account.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                حسابي
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================
+         JavaScript
+         ================================= -->
+
+    <script src="data.js"></script>
+
+    <script src="teacher-details.js"></script>
+
+
+</body>
+
+</html>

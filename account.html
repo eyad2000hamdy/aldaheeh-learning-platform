@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>حسابي - سنتر الدحيح</title>
+
+    <!-- ملف التصميم الرئيسي -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         صفحة حسابي
+         ================================= -->
+<!-- =================================
+     Developer Credit
+     ================================= -->
+
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+
+
+        <!-- =================================
+             رأس الصفحة
+             ================================= -->
+
+        <header class="page-header">
+
+            <div>
+
+                <p class="small-text">
+                    بياناتك الشخصية
+                </p>
+
+                <h1>
+                    👤 حسابي
+                </h1>
+
+            </div>
+
+
+            <div class="app-logo">
+                🎓
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             بيانات الطالب
+             ================================= -->
+
+        <section class="profile-card">
+
+
+            <div class="profile-avatar">
+
+                <span>
+                    👤
+                </span>
+
+            </div>
+
+
+            <div class="profile-info">
+
+                <h2 id="accountStudentName">
+                    الطالب
+                </h2>
+
+                <p id="accountStudentGrade">
+                    الصف الدراسي
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             إحصائيات الطالب
+             ================================= -->
+
+        <section class="account-stats">
+
+
+            <div class="account-stat-card">
+
+                <span class="account-stat-icon">
+                    👨‍🏫
+                </span>
+
+                <span class="account-stat-title">
+                    المدرسين
+                </span>
+
+                <strong id="accountTeachersCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="account-stat-card">
+
+                <span class="account-stat-icon">
+                    📚
+                </span>
+
+                <span class="account-stat-title">
+                    الحصص الأسبوعية
+                </span>
+
+                <strong id="accountLessonsCount">
+                    0
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             إعدادات الحساب
+             ================================= -->
+
+        <section class="account-settings">
+
+
+            <h2>
+                الإعدادات
+            </h2>
+
+
+            <!-- تعديل البيانات -->
+
+            <button
+                class="account-action-btn"
+                id="editDataBtn"
+            >
+
+                <span>
+                    ✏️
+                </span>
+
+                <div>
+
+                    <strong>
+                        تعديل البيانات
+                    </strong>
+
+                    <small>
+                        تعديل اسم الطالب والصف الدراسي
+                    </small>
+
+                </div>
+
+                <span class="action-arrow">
+                    ←
+                </span>
+
+            </button>
+
+
+
+            <!-- إعادة ضبط البيانات -->
+
+            <button
+                class="account-action-btn danger"
+                id="resetDataBtn"
+            >
+
+                <span>
+                    🗑️
+                </span>
+
+                <div>
+
+                    <strong>
+                        إعادة ضبط البيانات
+                    </strong>
+
+                    <small>
+                        حذف بياناتك وجميع حصصك
+                    </small>
+
+                </div>
+
+                <span class="action-arrow">
+                    ←
+                </span>
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         Modal تعديل البيانات
+         ================================= -->
+
+    <div
+        class="modal-overlay"
+        id="editModal"
+    >
+
+        <div class="modal-box">
+
+
+            <button
+                class="close-modal-btn"
+                id="closeEditModal"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                ✏️ تعديل البيانات
+            </h2>
+
+
+            <p>
+                عدّل بياناتك الشخصية
+            </p>
+
+
+            <form id="editStudentForm">
+
+
+                <div class="input-group">
+
+                    <label for="editStudentName">
+                        اسم الطالب
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editStudentName"
+                        placeholder="اكتب اسمك"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label for="editStudentGrade">
+                        الصف الدراسي
+                    </label>
+
+                    <select
+                        id="editStudentGrade"
+                        required
+                    >
+
+                        <option value="">
+                            اختر الصف الدراسي
+                        </option>
+
+                        <option value="الأول الإعدادي">
+                            الأول الإعدادي
+                        </option>
+
+                        <option value="الثاني الإعدادي">
+                            الثاني الإعدادي
+                        </option>
+
+                        <option value="الثالث الإعدادي">
+                            الثالث الإعدادي
+                        </option>
+
+                        <option value="الأول الثانوي">
+                            الأول الثانوي
+                        </option>
+
+                        <option value="الثاني الثانوي">
+                            الثاني الثانوي
+                        </option>
+
+                        <option value="الثالث الثانوي">
+                            الثالث الثانوي
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="save-data-btn"
+                >
+                    حفظ التعديلات
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         Navigation Bar
+         ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="home.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏠
+            </span>
+
+            <span>
+                الرئيسية
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="schedule.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                جدولي
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="teachers.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🏫
+            </span>
+
+            <span>
+                مدرسيني
+            </span>
+
+        </a>
+<a
+            href="assistants.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏃
+            </span>
+
+            <span>
+                الحجز
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="account.html"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                حسابي
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================
+         JavaScript
+         ================================= -->
+
+    <script src="account.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2828 @@
+/* =========================================
+   سنتر الدحيح
+   Main Style Sheet
+   ========================================= */
+
+
+/* =========================================
+   Reset
+   ========================================= */
+
+/* =================================
+   إعدادات عامة
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Tahoma", "Arial", sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5fb 0%,
+            #ffffff 50%,
+            #e8f1f8 100%
+        );
+
+    color: #17324d;
+
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   خلفية أكاديمية
+================================= */
+
+.academic-bg {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.bg-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(31, 91, 139, 0.07);
+
+    filter: blur(1px);
+}
+
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+
+    top: -180px;
+    right: -120px;
+}
+
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -100px;
+
+    background: rgba(24, 117, 173, 0.06);
+}
+
+
+.circle-3 {
+    width: 150px;
+    height: 150px;
+
+    top: 35%;
+    left: 10%;
+
+    background: rgba(31, 91, 139, 0.04);
+}
+
+
+/* =================================
+   بيانات المطور
+================================= */
+
+.developer-credit {
+    position: fixed;
+
+    top: 20px;
+    left: 25px;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(31, 91, 139, 0.12);
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(20, 55, 80, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 12px;
+
+    color: #6b7f91;
+}
+
+.developer-credit strong {
+    color: #1f5b8b;
+
+    font-size: 13px;
+}
+
+.whatsapp-link {
+    text-decoration: none;
+
+    color: #168c62;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp-link:hover {
+    color: #0e6949;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   الصفحة الرئيسية
+================================= */
+
+.welcome-page {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 90px 20px 40px;
+}
+
+
+/* =================================
+   الكارت الرئيسي
+================================= */
+
+.welcome-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 45px 45px 35px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(31, 91, 139, 0.12);
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(25, 64, 91, 0.13);
+
+    backdrop-filter: blur(15px);
+
+    animation: cardAppear 0.7s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =================================
+   الشعار
+================================= */
+
+.logo-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+
+.logo {
+    width: 92px;
+    height: 92px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1f5b8b,
+            #2c79ae
+        );
+
+    color: white;
+
+    font-size: 43px;
+
+    box-shadow:
+        0 12px 30px rgba(31, 91, 139, 0.25);
+
+    border: 6px solid #edf5fa;
+}
+
+
+/* =================================
+   العنوان
+================================= */
+
+.title-area {
+    margin-bottom: 25px;
+}
+
+
+.small-title {
+    display: block;
+
+    color: #71889b;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.title-area h1 {
+    color: #173d5b;
+
+    font-size: 39px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.title-line {
+    width: 55px;
+
+    height: 4px;
+
+    margin: 12px auto;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1f5b8b,
+            #4c91bd
+        );
+}
+
+
+.title-area p {
+    color: #6b7f91;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   معلومات التطبيق
+================================= */
+
+.welcome-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+
+.info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: right;
+
+    padding: 14px;
+
+    background: #f5f9fc;
+
+    border: 1px solid #e3edf4;
+
+    border-radius: 15px;
+}
+
+
+.info-item > span {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 10px;
+
+    font-size: 19px;
+}
+
+
+.info-item strong {
+    display: block;
+
+    color: #234862;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+
+.info-item small {
+    display: block;
+
+    color: #8495a3;
+
+    font-size: 10px;
+}
+
+
+/* =================================
+   زر ابدأ الآن
+================================= */
+
+.start-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 16px 22px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f5b8b,
+            #2875a9
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(31, 91, 139, 0.22);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+
+.start-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 30px rgba(31, 91, 139, 0.30);
+}
+
+
+.start-btn:active {
+    transform: translateY(0);
+}
+
+
+.arrow {
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+.start-btn:hover .arrow {
+    transform: translateX(-5px);
+}
+
+
+/* =================================
+   ملاحظة الخصوصية
+================================= */
+
+.privacy-note {
+    margin-top: 17px;
+
+    color: #9aa8b3;
+
+    font-size: 11px;
+}
+
+
+/* =================================
+   نافذة البيانات
+================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15, 40, 60, 0.55);
+
+    backdrop-filter: blur(7px);
+}
+
+
+.modal.active {
+    display: flex;
+}
+
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 38px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.22);
+
+    animation: modalAppear 0.35s ease;
+}
+
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =================================
+   زر إغلاق النافذة
+================================= */
+
+.close-btn {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f8;
+
+    color: #6e7f8c;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.close-btn:hover {
+    background: #e6edf2;
+
+    color: #173d5b;
+}
+
+
+/* =================================
+   رأس النافذة
+================================= */
+
+.modal-header {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.modal-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf5fa;
+
+    font-size: 28px;
+}
+
+
+.modal-header h2 {
+    color: #173d5b;
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+
+.modal-header p {
+    color: #81909c;
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   حقول الإدخال
+================================= */
+
+.input-group {
+    margin-bottom: 19px;
+}
+
+
+.input-group label {
+    display: block;
+
+    color: #34536b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #dce7ee;
+
+    border-radius: 12px;
+
+    background: #f9fbfc;
+
+    color: #29465c;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #3980ad;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(57, 128, 173, 0.10);
+}
+
+
+.input-group input::placeholder {
+    color: #a5b1ba;
+}
+
+
+/* =================================
+   زر حفظ البيانات
+================================= */
+
+.save-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f5b8b,
+            #2875a9
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 8px 20px rgba(31, 91, 139, 0.18);
+}
+
+
+.save-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 25px rgba(31, 91, 139, 0.25);
+}
+
+
+/* =================================
+   الموبايل
+================================= */
+
+@media (max-width: 600px) {
+
+    .developer-credit {
+        position: absolute;
+
+        top: 12px;
+        left: 12px;
+        right: 12px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        font-size: 10px;
+
+        padding: 8px;
+    }
+
+
+    .developer-credit strong {
+        font-size: 11px;
+    }
+
+
+    .welcome-page {
+        padding: 100px 15px 25px;
+    }
+
+
+    .welcome-card {
+        padding: 32px 20px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .logo {
+        width: 78px;
+        height: 78px;
+
+        font-size: 35px;
+    }
+
+
+    .title-area h1 {
+        font-size: 31px;
+    }
+
+
+    .title-area p {
+        font-size: 14px;
+    }
+
+
+    .welcome-info {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+
+    .info-item {
+        padding: 11px;
+    }
+
+
+    .modal-content {
+        padding: 30px 22px;
+    }
+
+}
+
+
+/* =========================================
+   General Container
+   ========================================= */
+
+main {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 20px;
+
+}
+
+
+/* =========================================
+   Header
+   ========================================= */
+
+.page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-header h1 {
+
+    font-size: 30px;
+
+    margin-top: 5px;
+
+}
+
+
+.small-text {
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+}
+
+
+.app-logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 18px;
+
+    background: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.18);
+
+}
+
+
+/* =========================================
+   Home
+   ========================================= */
+
+.home-header {
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(37, 99, 235, 0.18);
+
+}
+
+
+.home-header h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.home-header p {
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================================
+   Search
+   ========================================= */
+
+.search-box {
+
+    position: relative;
+
+    margin-bottom: 25px;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: white;
+
+    padding: 16px 50px 16px 18px;
+
+    border-radius: 16px;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.search-icon {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================
+   Sections
+   ========================================= */
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================
+   Subjects
+   ========================================= */
+
+.subjects-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.subject-card {
+
+    border: none;
+
+    background: white;
+
+    padding: 18px 10px;
+
+    border-radius: 17px;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.04);
+
+}
+
+
+.subject-card:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.subject-card.active {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   Teachers Grid
+   ========================================= */
+
+.teachers-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================
+   Teacher Card
+   ========================================= */
+
+.teacher-card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s;
+
+}
+
+
+.teacher-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(0, 0, 0, 0.09);
+
+}
+
+
+.teacher-image-container {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.teacher-image {
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #eff6ff;
+
+}
+
+
+.teacher-info h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.teacher-subject {
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+
+.teacher-grades {
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.teacher-price {
+
+    margin-top: 14px;
+
+    background: #f8fafc;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+}
+
+
+.teacher-schedules {
+
+    margin-top: 12px;
+
+}
+
+
+.schedule-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: #f8fafc;
+
+    padding: 9px;
+
+    border-radius: 10px;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+}
+
+
+.teacher-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+}
+
+
+.details-btn,
+.subscribe-btn {
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 12px 8px;
+
+    font-weight: bold;
+
+}
+
+
+.details-btn {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+}
+
+
+.subscribe-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   Empty Search
+   ========================================= */
+
+.empty-search {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #6b7280;
+
+}
+
+
+.empty-search-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+   Teacher Details
+   ========================================= */
+
+.teacher-details-page {
+
+    max-width: 850px;
+
+}
+
+
+.details-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.details-header h1 {
+
+    font-size: 25px;
+
+}
+
+
+.back-btn {
+
+    border: none;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 10px 15px;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.teacher-details-card {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.teacher-details-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.teacher-details-image {
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+}
+
+
+.teacher-details-main-info h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.details-subject {
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+.teacher-details-info {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.details-info-item {
+
+    background: #f8fafc;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+}
+
+
+.details-info-item span {
+
+    display: block;
+
+    color: #6b7280;
+
+    margin-bottom: 8px;
+
+}
+
+
+.teacher-description {
+
+    margin-top: 25px;
+
+}
+
+
+.teacher-description h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.teacher-description p {
+
+    color: #6b7280;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================
+   Choose Schedule
+   ========================================= */
+
+.choose-schedule-section {
+
+    background: white;
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.available-schedules {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.available-schedule {
+
+    border: 2px solid #e5e7eb;
+
+    background: white;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    transition: 0.2s;
+
+}
+
+
+.available-schedule:hover {
+
+    border-color: #2563eb;
+
+}
+
+
+.available-schedule.selected {
+
+    background: #eff6ff;
+
+    border-color: #2563eb;
+
+    color: #2563eb;
+
+}
+
+
+.add-schedule-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   Schedule Page
+   ========================================= */
+
+.schedule-summary {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.summary-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.summary-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+}
+
+
+.summary-card span {
+
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+}
+
+
+.summary-card strong {
+
+    display: block;
+
+    font-size: 23px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================================
+   Days
+   ========================================= */
+
+.days-container {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.day-btn {
+
+    flex: 0 0 auto;
+
+    border: none;
+
+    background: white;
+
+    padding: 12px 18px;
+
+    border-radius: 13px;
+
+    color: #374151;
+
+}
+
+
+.day-btn.active {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   Lesson Card
+   ========================================= */
+
+.schedule-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.lesson-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.lesson-time {
+
+    min-width: 110px;
+
+    text-align: center;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 13px;
+
+    border-radius: 14px;
+
+}
+
+
+.lesson-time strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+}
+
+
+.lesson-info {
+
+    flex: 1;
+
+}
+
+
+.lesson-info h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.lesson-info p {
+
+    color: #6b7280;
+
+    margin-bottom: 8px;
+
+}
+
+
+.lesson-price {
+
+    font-size: 14px;
+
+    color: #2563eb;
+
+}
+
+
+.delete-lesson-btn {
+
+    border: none;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================================
+   Empty Schedule
+   ========================================= */
+
+.empty-schedule,
+.empty-my-teachers {
+
+    text-align: center;
+
+    background: white;
+
+    padding: 45px 20px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.04);
+
+}
+
+
+.empty-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.empty-schedule p,
+.empty-my-teachers p {
+
+    color: #6b7280;
+
+    margin: 10px 0 20px;
+
+}
+
+
+.browse-teachers-btn {
+
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================================
+   My Teachers
+   ========================================= */
+
+.my-teachers-summary {
+
+    margin-bottom: 25px;
+
+}
+
+
+.my-teachers-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.my-teacher-card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.my-teacher-image {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.my-teacher-image img {
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+.my-teacher-info h3 {
+
+    font-size: 19px;
+
+}
+
+
+.my-teacher-subject {
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin: 6px 0;
+
+}
+
+
+.my-teacher-price {
+
+    background: #f8fafc;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    margin-top: 12px;
+
+}
+
+
+.my-teacher-schedules {
+
+    margin-top: 12px;
+
+}
+
+
+.my-teacher-schedule {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: #f8fafc;
+
+    padding: 9px;
+
+    border-radius: 10px;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+}
+
+
+.my-teacher-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+}
+
+
+.view-schedule-btn,
+.cancel-subscription-btn {
+
+    border: none;
+
+    padding: 11px 6px;
+
+    border-radius: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.view-schedule-btn {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+}
+
+
+.cancel-subscription-btn {
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+}
+
+
+.no-teacher-schedule {
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   Account
+   ========================================= */
+
+.profile-card {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.profile-avatar {
+
+    width: 85px;
+
+    height: 85px;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+}
+
+
+.profile-info h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.profile-info p {
+
+    color: #6b7280;
+
+}
+
+
+.account-stats {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin: 20px 0;
+
+}
+
+
+.account-stat-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.account-stat-icon {
+
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.account-stat-title {
+
+    display: block;
+
+    color: #6b7280;
+
+}
+
+
+.account-stat-card strong {
+
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 25px;
+
+    margin-top: 7px;
+
+}
+
+
+.account-settings {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 22px;
+
+}
+
+
+.account-settings h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.account-action-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: #f8fafc;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-align: right;
+
+}
+
+
+.account-action-btn div {
+
+    flex: 1;
+
+}
+
+
+.account-action-btn strong {
+
+    display: block;
+
+    font-size: 15px;
+
+}
+
+
+.account-action-btn small {
+
+    display: block;
+
+    color: #6b7280;
+
+    margin-top: 4px;
+
+}
+
+
+.action-arrow {
+
+    font-size: 18px;
+
+}
+
+
+.account-action-btn.danger {
+
+    background: #fff7f7;
+
+}
+
+
+.account-action-btn.danger strong {
+
+    color: #dc2626;
+
+}
+
+
+/* =========================================
+   Modal
+   ========================================= */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+}
+
+
+.modal-overlay.show {
+
+    display: flex;
+
+}
+
+
+.modal-box {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    position: relative;
+
+}
+
+
+.close-modal-btn {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+}
+
+
+.modal-box h2 {
+
+    margin-bottom: 7px;
+
+}
+
+
+.modal-box > p {
+
+    color: #6b7280;
+
+    margin-bottom: 20px;
+
+}
+
+
+.input-group {
+
+    margin-bottom: 17px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+}
+
+
+.input-group input,
+.input-group select {
+
+    width: 100%;
+
+    border: 1px solid #e5e7eb;
+
+    outline: none;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: #2563eb;
+
+}
+
+
+.save-data-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 13px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   Bottom Navigation
+   ========================================= */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    right: 0;
+
+    left: 0;
+
+    height: 75px;
+
+    background: white;
+
+    border-top: 1px solid #e5e7eb;
+
+    display: flex;
+
+    justify-content: center;
+
+    z-index: 900;
+
+    box-shadow:
+        0 -5px 20px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.nav-item {
+
+    width: 25%;
+
+    max-width: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+
+}
+
+
+.nav-icon {
+
+    font-size: 21px;
+
+}
+
+
+.nav-item.active {
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   Responsive - Tablet
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .subjects-container {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .teachers-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .my-teachers-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   Responsive - Mobile
+   ========================================= */
+
+@media (max-width: 600px) {
+
+
+    body {
+
+        padding-bottom: 82px;
+
+    }
+
+
+    main {
+
+        padding:
+            18px 14px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .home-header {
+
+        padding: 22px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .home-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .subjects-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .teachers-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .my-teachers-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .teacher-card {
+
+        padding: 15px;
+
+    }
+
+
+    .teacher-image {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+
+    .teacher-buttons {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .teacher-details-top {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .teacher-details-image {
+
+        width: 130px;
+
+        height: 130px;
+
+    }
+
+
+    .teacher-details-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .available-schedules {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .schedule-summary {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .summary-card {
+
+        padding: 13px;
+
+    }
+
+
+    .summary-card span {
+
+        font-size: 12px;
+
+    }
+
+
+    .lesson-card {
+
+        padding: 13px;
+
+        gap: 10px;
+
+    }
+
+
+    .lesson-time {
+
+        min-width: 85px;
+
+        padding: 10px 5px;
+
+    }
+
+
+    .lesson-info h3 {
+
+        font-size: 16px;
+
+    }
+
+
+    .delete-lesson-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .profile-card {
+
+        padding: 18px;
+
+    }
+
+
+    .profile-avatar {
+
+        width: 70px;
+
+        height: 70px;
+
+    }
+
+
+    .profile-info h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .account-stats {
+
+        gap: 10px;
+
+    }
+
+
+    .account-stat-card {
+
+        padding: 15px 8px;
+
+    }
+
+
+    .account-stat-title {
+
+        font-size: 13px;
+
+    }
+
+
+    .bottom-nav {
+
+        height: 70px;
+
+    }
+
+
+    .nav-item {
+
+        font-size: 10px;
+
+    }
+
+
+    .nav-icon {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =========================================
+   Small Mobile
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .teacher-buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .my-teacher-buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .schedule-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+} 
+.developer-credit {
+    text-align: center;
+    padding: 15px 10px 90px;
+    font-size: 13px;
+    color: #777;
+}
+
+.developer-credit strong {
+    color: #2563eb;
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 7px 12px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    opacity: 0.85;
+}
+/* بيانات المطور - سطر واحد */
+
+.developer-credit {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e1eaf0;
+    border-radius: 8px;
+
+    font-size: 10px;
+    white-space: nowrap;
+
+    color: #7b8c99;
+
+    box-shadow: 0 3px 10px rgba(20, 55, 80, 0.07);
+
+    z-index: 20;
+}
+
+.developer-credit strong {
+    color: #1f5b8b;
+    font-size: 11px;
+}
+
+.developer-credit span {
+    color: #b3bec6;
+}
+
+.whatsapp-link {
+    color: #168c62;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    color: #0d6949;
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سنتر الدحيح - الرئيسية</title>
+
+    <!-- ملف التصميم الرئيسي -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         الصفحة الرئيسية
+         ================================= -->
+<!-- =================================
+     Developer Credit
+     ================================= -->
+
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+    <main class="home-page">
+
+
+        <!-- =================================
+             الهيدر
+             ================================= -->
+
+        <header class="home-header">
+
+            <div>
+
+                <p class="small-text">
+                    أهلاً بيك 👋
+                </p>
+
+                <h1 id="welcomeStudent">
+                    أهلاً يا طالب 👋
+                </h1>
+
+            </div>
+
+
+            <div class="app-logo">
+               🎓
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             مربع البحث
+             ================================= -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span>
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="ابحث عن مدرس أو مادة..."
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             المواد الدراسية
+             ================================= -->
+
+        <section class="subjects-section">
+
+            <div class="section-title">
+
+                <h2>
+                    المواد الدراسية
+                </h2>
+
+            </div>
+
+
+            <div class="subjects-container">
+
+
+                <button
+                    class="subject-card active"
+                    data-subject="all"
+                >
+
+                    <span class="subject-icon">
+                        📚
+                    </span>
+
+                    <span>
+                        الكل
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="subject-card"
+                    data-subject="رياضيات"
+                >
+
+                    <span class="subject-icon">
+                        📐
+                    </span>
+
+                    <span>
+                        رياضيات
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="subject-card"
+                    data-subject="عربي"
+                >
+
+                    <span class="subject-icon">
+                        📖
+                    </span>
+
+                    <span>
+                        عربي
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="subject-card"
+                    data-subject="English"
+                >
+
+                    <span class="subject-icon">
+                        🇬🇧
+                    </span>
+
+                    <span>
+                        English
+                    </span>
+
+                </button>
+
+
+
+               
+
+
+                <button
+                    class="subject-card"
+                    data-subject="فيزياء"
+                >
+
+                    <span class="subject-icon">
+                        ⚡
+                    </span>
+
+                    <span>
+                        فيزياء
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="subject-card"
+                    data-subject="كيمياء"
+                >
+
+                    <span class="subject-icon">
+                        ⚗️
+                    </span>
+
+                    <span>
+                        كيمياء
+                    </span>
+
+                </button>
+  
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             المدرسين
+             ================================= -->
+
+        <section class="teachers-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    المدرسين
+                </h2>
+
+                <span id="teachersCount">
+                    0 مدرس
+                </span>
+
+            </div>
+
+
+            <!-- هنا JavaScript هيضيف Cards المدرسين -->
+
+            <div
+                class="teachers-container"
+                id="teachersContainer"
+            >
+
+                <!-- المدرسين هيتحطوا هنا -->
+
+            </div>
+
+
+            <!-- رسالة عدم وجود نتائج -->
+
+            <div
+                class="empty-search"
+                id="emptySearch"
+            >
+
+                <div class="empty-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    مفيش نتائج
+                </h3>
+
+                <p>
+                    جرب تبحث عن مدرس أو مادة تانية.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+    
+      
+
+
+
+
+         
+
+
+    <!-- =================================
+         Navigation Bar
+         ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="home.html"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                🏠
+            </span>
+
+            <span>
+                الرئيسية
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="schedule.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                جدولي
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="teachers.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🏫
+            </span>
+
+            <span>
+                مدرسيني
+            </span>
+
+        </a>
+
+<!-- =====================================
+     قسم مساعدي سنتر الدحيح
+===================================== -->
+
+<a
+            href="assistants.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏃
+            </span>
+
+            <span>
+                الحجز
+            </span>
+
+        </a>
+
+        <a
+            href="account.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                حسابي
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================
+         JavaScript
+         ================================= -->
+
+    <script src="data.js"></script>
+
+    <script src="home.js"></script>
+
+
+</body>
+
+</html>

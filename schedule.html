@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>جدولي - سنتر الدحيح</title>
+
+    <!-- ملف التصميم الرئيسي -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         صفحة جدولي
+         ================================= -->
+<!-- =================================
+     Developer Credit
+     ================================= -->
+
+<!-- بيانات المطور -->
+
+<div class="developer-credit">
+    Developed by
+    <strong>إياد حمدي 💻</strong>
+    <span>•</span>
+    <a
+        href="https://wa.me/201153010294"
+        target="_blank"
+        class="whatsapp-link"
+    >
+        💬 تواصل معي
+    </a>
+</div>
+    <main class="schedule-page">
+
+
+        <!-- =================================
+             رأس الصفحة
+             ================================= -->
+
+        <header class="page-header">
+
+            <div>
+
+                <p class="small-text">
+                    تنظيم حصصك
+                </p>
+
+                <h1>
+                    📅 جدولي
+                </h1>
+
+            </div>
+
+
+            <div class="app-logo">
+                🎓
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             ملخص الجدول
+             ================================= -->
+
+        <section class="schedule-summary">
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    📚
+                </span>
+
+                <div>
+
+                    <span>
+                        حصصي الأسبوعية
+                    </span>
+
+                    <strong id="weeklyLessonsCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    👨‍🏫
+                </span>
+
+                <div>
+
+                    <span>
+                        المدرسين
+                    </span>
+
+                    <strong id="scheduleTeachersCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             أيام الأسبوع
+             ================================= -->
+
+        <section class="days-section">
+
+
+            <div class="days-container">
+
+
+                <button
+                    class="day-btn active"
+                    data-day="السبت"
+                >
+                    السبت
+                </button>
+
+
+                <button
+                    class="day-btn"
+                    data-day="الأحد"
+                >
+                    الأحد
+                </button>
+
+
+                <button
+                    class="day-btn"
+                    data-day="الإثنين"
+                >
+                    الإثنين
+                </button>
+
+
+                <button
+                    class="day-btn"
+                    data-day="الثلاثاء"
+                >
+                    الثلاثاء
+                </button>
+
+
+                <button
+                    class="day-btn"
+                    data-day="الأربعاء"
+                >
+                    الأربعاء
+                </button>
+
+
+                <button
+                    class="day-btn"
+                    data-day="الخميس"
+                >
+                    الخميس
+                </button>
+
+
+                <button
+                    class="day-btn"
+                    data-day="الجمعة"
+                >
+                    الجمعة
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             عنوان اليوم
+             ================================= -->
+
+        <section class="current-day-section">
+
+            <div class="section-title">
+
+                <h2 id="currentDayTitle">
+                    حصص السبت
+                </h2>
+
+            </div>
+
+
+            <!-- =================================
+                 حصص اليوم
+                 ================================= -->
+
+            <div
+                class="schedule-container"
+                id="scheduleContainer"
+            >
+
+                <!-- JavaScript هيضيف الحصص هنا -->
+
+            </div>
+
+
+            <!-- =================================
+                 حالة عدم وجود حصص
+                 ================================= -->
+
+            <div
+                class="empty-schedule"
+                id="emptySchedule"
+            >
+
+                <div class="empty-icon">
+                    📚
+                </div>
+
+                <h3>
+                    لا توجد حصص اليوم
+                </h3>
+
+                <p>
+                    لم تضف أي حصة في هذا اليوم حتى الآن.
+                </p>
+
+                <a
+                    href="home.html"
+                    class="browse-teachers-btn"
+                >
+                    تصفح المدرسين
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         Navigation Bar
+         ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="home.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏠
+            </span>
+
+            <span>
+                الرئيسية
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="schedule.html"
+            class="nav-item active"
+        >
+
+            <span class="nav-icon">
+                📅
+            </span>
+
+            <span>
+                جدولي
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="teachers.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👨‍🏫
+            </span>
+
+            <span>
+                مدرسيني
+            </span>
+
+        </a>
+
+<a
+            href="assistants.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                🏃
+            </span>
+
+            <span>
+                الحجز
+            </span>
+
+        </a>
+
+
+        <a
+            href="account.html"
+            class="nav-item"
+        >
+
+            <span class="nav-icon">
+                👤
+            </span>
+
+            <span>
+                حسابي
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================
+         JavaScript
+         ================================= -->
+
+    <script src="schedule.js"></script>
+
+
+</body>
+
+</html>
